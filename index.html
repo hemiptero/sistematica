@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infografía: Sistemática - FES Iztacala</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400;1,700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cloro: '#2D6A4F',
+                        azulprof: '#1B4965',
+                        tierra: '#606C38',
+                        hueso: '#F8F9FA'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Lora', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #F8F9FA; }
+        .timeline-line::after {
+            content: '';
+            position: absolute;
+            width: 4px;
+            background-color: #606C38;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -2px;
+            opacity: 0.3;
+        }
+        @media (max-width: 768px) {
+            .timeline-line::after {
+                left: 31px;
+            }
+        }
+    </style>
+</head>
+<body class="text-gray-800 antialiased">
+
+    <!-- HEADER / HERO -->
+    <header class="bg-azulprof text-white py-16 px-6 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <!-- Patrón ADN SVG -->
+            <svg width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none">
+                <path d="M0,50 Q25,10 50,50 T100,50" stroke="white" stroke-width="2" fill="none"/>
+                <path d="M0,50 Q25,90 50,50 T100,50" stroke="white" stroke-width="2" fill="none"/>
+                <line x1="25" y1="30" x2="25" y2="70" stroke="white" stroke-width="1"/>
+                <line x1="75" y1="30" x2="75" y2="70" stroke="white" stroke-width="1"/>
+            </svg>
+        </div>
+        <div class="max-w-4xl mx-auto relative z-10 text-center">
+            <span class="bg-tierra text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-widest">Carrera de Biología de la FES Iztacala</span>
+            <h1 class="text-5xl md:text-6xl font-serif font-bold mt-6 mb-4 leading-tight">Sistemática</h1>
+            <h2 class="text-xl md:text-2xl font-light text-blue-100 font-serif italic">Unidad 1: Historia y Objeto de Estudio</h2>
+        </div>
+    </header>
+
+    <!-- SECCIÓN 1.1: INTRODUCCIÓN -->
+    <section class="max-w-4xl mx-auto px-6 py-16">
+        <div class="bg-white rounded-3xl shadow-xl p-8 md:p-12 border-t-8 border-cloro relative -mt-24 z-20">
+            <h3 class="text-3xl font-serif font-bold text-azulprof mb-6">1.1 ¿Qué es la Sistemática?</h3>
+            
+            <p class="text-lg leading-relaxed mb-8">
+                La sistemática es la disciplina biológica encargada de estudiar la diversidad de los seres vivos y sus orígenes. De acuerdo con la Society of Systematic Biologists, su enfoque central es comprender las relaciones evolutivas entre organismos, especies, taxones superiores y otras entidades biológicas como los genes, así como la evolución de las propiedades de los taxones: sus rasgos intrínsecos, interacciones ecológicas y distribuciones geográficas. Una parte esencial de la sistemática moderna es el desarrollo de métodos matemáticos y computacionales para la inferencia filogenética y la nomenclatura biológica.
+
+            </p>
+
+            <div class="bg-blue-50 rounded-2xl p-6 mb-10 flex flex-col md:flex-row gap-6 items-center">
+                <div class="w-16 h-16 bg-azulprof rounded-full flex items-center justify-center shrink-0">
+                    <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 002-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+                </div>
+                <div>
+                    <h4 class="font-bold text-azulprof text-lg">La ciencia más elemental e inclusiva</h4>
+                    <p class="text-sm text-gray-600 mt-2"><strong>Elemental:</strong> Es imposible estudiar a los organismos sin organización e identificación previa. <br><strong>Inclusiva:</strong> Sintetiza morfología, genética, ecología y biología molecular.</p>
+                </div>
+            </div>
+
+            <h4 class="font-serif font-bold text-2xl text-tierra mb-6">Objetivos Principales</h4>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Obj 1 -->
+                <div class="flex gap-4">
+                    <div class="text-cloro"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg></div>
+                    <div>
+                        <h5 class="font-bold text-gray-800">Inventariar</h5>
+                        <p class="text-sm text-gray-600">Identificar, describir, nombrar y clasificar taxones.</p>
+                    </div>
+                </div>
+                <!-- Obj 2 -->
+                <div class="flex gap-4">
+                    <div class="text-cloro"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg></div>
+                    <div>
+                        <h5 class="font-bold text-gray-800">Reconstruir Filogenias</h5>
+                        <p class="text-sm text-gray-600">Revelar patrones de parentesco y divergencia en el tiempo evolutivo.</p>
+                    </div>
+                </div>
+                <!-- Obj 3 -->
+                <div class="flex gap-4">
+                    <div class="text-cloro"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg></div>
+                    <div>
+                        <h5 class="font-bold text-gray-800">Marco Interpretativo</h5>
+                        <p class="text-sm text-gray-600">Base para la biogeografía, ecología y paleontología.</p>
+                    </div>
+                </div>
+                <!-- Obj 4 -->
+                <div class="flex gap-4">
+                    <div class="text-cloro"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg></div>
+                    <div>
+                        <h5 class="font-bold text-gray-800">Aplicación Práctica</h5>
+                        <p class="text-sm text-gray-600">Datos para medicina, agronomía y conservación biológica.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-8 p-4 border-l-4 border-tierra bg-stone-50 text-stone-700 italic text-center text-sm">
+                Cualquier afirmación sobre evolución, distribución de enfermedades o conservación depende de una clasificación sistemática rigurosa.
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 1.2: HISTORIA (TIMELINE) -->
+    <section class="bg-stone-100 py-16">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h3 class="text-4xl font-serif font-bold text-azulprof mb-4">1.2 Historia de la Sistemática</h3>
+                <p class="text-gray-600">Evolución del pensamiento clasificatorio a través del tiempo.</p>
+            </div>
+
+            <div class="relative timeline-line">
+                <!-- Etapa 1 -->
+                <div class="mb-12 flex flex-col md:flex-row items-center w-full relative z-10">
+                    <div class="w-full md:w-1/2 md:pr-12 text-right hidden md:block">
+                        <h4 class="text-2xl font-serif font-bold text-tierra">Clasificaciones "Folk"</h4>
+                        <p class="mt-2 text-gray-600">Sistemas tradicionales etnobiológicos. Criterio central: <strong>Utilidad</strong> (alimento, medicina). Ej: Tribu Fore, Mayas/Nahuas, Purépechas (hongos).</p>
+                    </div>
+                    <div class="w-16 h-16 absolute left-4 md:left-1/2 -ml-8 bg-white border-4 border-tierra rounded-full flex items-center justify-center text-tierra font-bold">1</div>
+                    <div class="w-full pl-20 md:hidden">
+                        <h4 class="text-2xl font-serif font-bold text-tierra">Clasificaciones "Folk"</h4>
+                        <p class="mt-2 text-sm text-gray-600">Sistemas tradicionales etnobiológicos. Criterio central: Utilidad. Ej: Mayas, Purépechas.</p>
+                    </div>
+                </div>
+
+                <!-- Etapa 2 -->
+                <div class="mb-12 flex flex-col md:flex-row md:justify-end items-center w-full relative z-10">
+                    <div class="w-16 h-16 absolute left-4 md:left-1/2 -ml-8 bg-white border-4 border-azulprof rounded-full flex items-center justify-center text-azulprof font-bold">2</div>
+                    <div class="w-full md:w-1/2 md:pl-12 hidden md:block">
+                        <h4 class="text-2xl font-serif font-bold text-azulprof">Etapa Prelinneana</h4>
+                        <p class="mt-2 text-gray-600"><strong>Esencialismo:</strong> Platón y Aristóteles. Agrupación por "esencias" inmutables. Dominio medieval de la <em>Scala Naturae</em>.</p>
+                    </div>
+                    <div class="w-full pl-20 md:hidden">
+                        <h4 class="text-2xl font-serif font-bold text-azulprof">Etapa Prelinneana</h4>
+                        <p class="mt-2 text-sm text-gray-600"><strong>Esencialismo:</strong> Platón y Aristóteles. Agrupación por esencias inmutables. Dominio de la <em>Scala Naturae</em>.</p>
+                    </div>
+                </div>
+
+                <!-- Etapa 3 -->
+                <div class="mb-12 flex flex-col md:flex-row items-center w-full relative z-10">
+                    <div class="w-full md:w-1/2 md:pr-12 text-right hidden md:block">
+                        <h4 class="text-2xl font-serif font-bold text-cloro">De Linneo a Darwin</h4>
+                        <div class="mt-2 bg-white p-4 rounded-xl shadow-sm inline-block text-left border-l-4 border-cloro">
+                            <p class="text-sm"><strong>Linneo:</strong> Clasificación jerárquica y nomenclatura binominal (1753).</p>
+                            <p class="text-sm mt-2 border-t pt-2"><strong>Darwin:</strong> Revolución del Origen de las Especies (1859). Sustituye la escalera por el árbol filogenético.</p>
+                        </div>
+                    </div>
+                    <div class="w-16 h-16 absolute left-4 md:left-1/2 -ml-8 bg-white border-4 border-cloro rounded-full flex items-center justify-center text-cloro font-bold">3</div>
+                    <div class="w-full pl-20 md:hidden">
+                        <h4 class="text-2xl font-serif font-bold text-cloro">De Linneo a Darwin</h4>
+                        <p class="mt-2 text-sm text-gray-600"><strong>Linneo:</strong> Nomenclatura binominal. <br><strong>Darwin:</strong> Evolución y árbol genealógico.</p>
+                    </div>
+                </div>
+
+                <!-- Etapa 4 -->
+                <div class="mb-12 flex flex-col md:flex-row md:justify-end items-center w-full relative z-10">
+                    <div class="w-16 h-16 absolute left-4 md:left-1/2 -ml-8 bg-tierra border-4 border-white rounded-full flex items-center justify-center text-white font-bold">4</div>
+                    
+                    <div class="w-full md:w-1/2 md:pl-12 hidden md:block">
+                        <h4 class="text-2xl font-serif font-bold text-tierra">Sistemática del Siglo XX</h4>
+                        
+                        <!-- Escuelas en Desktop -->
+                        <div class="mt-6 space-y-4">
+                            <div class="bg-white p-4 rounded-xl shadow-sm border-l-4 border-gray-400">
+                                <h5 class="font-bold text-sm text-gray-800">Sistemática Evolutiva</h5>
+                                <p class="text-xs text-gray-600 mt-1">Fundada por Mayr y Simpson. Refleja tanto la ascendencia común (genealogía) como la divergencia evolutiva o salto adaptativo. Altamente subjetiva.</p>
+                            </div>
+                            <div class="bg-white p-4 rounded-xl shadow-sm border-l-4 border-blue-500">
+                                <h5 class="font-bold text-sm text-gray-800">Sistemática Fenética</h5>
+                                <p class="text-xs text-gray-600 mt-1">Impulsada por Sokal y Sneath. Clasificaciones matemáticas libres de asunciones evolutivas. Agrupación por similitud global (fenogramas). No distingue homoplasias.</p>
+                            </div>
+                            <div class="bg-white p-4 rounded-xl shadow-md border-l-4 border-cloro">
+                                <h5 class="font-bold text-sm text-cloro">Cladística (Filogenética)</h5>
+                                <p class="text-xs text-gray-600 mt-1">Willi Hennig (1950). El único objetivo válido es reconstruir rigurosamente las hipótesis filogenéticas, basándose exclusivamente en el parentesco evolutivo (monofilia) y delimitados por sinapomorfías.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="w-full pl-20 md:hidden mt-4">
+                        <h4 class="text-2xl font-serif font-bold text-tierra mb-4">Escuelas del Siglo XX</h4>
+                        
+                        <!-- Escuelas en Mobile -->
+                        <div class="space-y-4">
+                            <div class="bg-white p-4 rounded-xl shadow-sm border-l-4 border-gray-400">
+                                <h5 class="font-bold text-sm text-gray-800">Sistemática Evolutiva</h5>
+                                <p class="text-xs text-gray-600 mt-1">Mayr y Simpson. Refleja genealogía y saltos adaptativos. Subjetiva.</p>
+                            </div>
+                            <div class="bg-white p-4 rounded-xl shadow-sm border-l-4 border-blue-500">
+                                <h5 class="font-bold text-sm text-gray-800">Sistemática Fenética</h5>
+                                <p class="text-xs text-gray-600 mt-1">Sokal y Sneath. Agrupación por similitud global matemática. No distingue homoplasias.</p>
+                            </div>
+                            <div class="bg-white p-4 rounded-xl shadow-md border-l-4 border-cloro">
+                                <h5 class="font-bold text-sm text-cloro">Cladística</h5>
+                                <p class="text-xs text-gray-600 mt-1">Willi Hennig. Basada en el parentesco riguroso (monofilia) y sinapomorfías compartidas.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 1.3: ACTUALIDAD -->
+    <section class="max-w-4xl mx-auto px-6 py-16">
+        <h3 class="text-3xl font-serif font-bold text-azulprof mb-10 text-center">1.3 La Sistemática en la actualidad</h3>
+        
+        <!-- Taxonomía vs Sistemática -->
+        <div class="mb-12">
+            <h4 class="text-xl font-bold text-gray-800 mb-6 flex items-center">
+                <span class="w-8 h-8 rounded bg-tierra text-white flex justify-center items-center mr-3 text-sm">A</span>
+                Taxonomía vs. Sistemática
+            </h4>
+            <div class="flex flex-col md:flex-row gap-4">
+                <div class="flex-1 bg-azulprof p-6 rounded-2xl border border-gray-200">
+                    <h5 class="font-bold text-white text-lg mb-2">Sinónimos</h5>
+                    <p class="text-sm text-white">Postura de Simpson (1961). Se usan de manera intercambiable en la tradición anglosajona.</p>
+                </div>
+                <div class="flex-1 bg-white p-6 rounded-2xl border border-gray-200">
+                    <h5 class="font-bold text-azulprof text-lg mb-2">Distintos</h5>
+                    <p class="text-sm text-gray-600">Taxonomía clasifica y nombra. Sistemática va más allá, sumando las relaciones evolutivas.</p>
+                </div>
+                <div class="flex-1 bg-cloro text-white p-6 rounded-2xl shadow-lg">
+                    <h5 class="font-bold text-white text-lg mb-2">Inclusión</h5>
+                    <p class="text-sm text-emerald-100">Stuessy (1990). La sistemática engloba: Taxonomía, procesos evolutivos y filogenia.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Biodiversidad -->
+        <div>
+            <h4 class="text-xl font-bold text-gray-800 mb-6 flex items-center">
+                <span class="w-8 h-8 rounded bg-cloro text-white flex justify-center items-center mr-3 text-sm">B</span>
+                El objeto de estudio: Biodiversidad
+            </h4>
+            <p class="text-white mb-6 bg-azulprof p-4 rounded-lg italic text-sm">
+                "Variabilidad de organismos vivos de cualquier fuente y los complejos ecológicos de los que forman parte." — CBD (1992)
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-white rounded-2xl shadow-sm p-6 text-center border-b-4 border-azulprof">
+                    <div class="w-12 h-12 mx-auto bg-blue-100 rounded-full flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-azulprof" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M12 2v2"></path><path d="M19.1 7.1l1.4 1.4"></path><path d="M22 12h-2"></path><path d="M19.1 16.9l-1.4 1.4"></path><path d="M12 22v-2"></path><path d="M4.9 16.9L3.5 15.5"></path><path d="M2 12h2"></path><path d="M4.9 7.1l1.4-1.4"></path><path d="M12 6c3.3 0 6 2.7 6 6s-2.7 6-6 6"></path><path d="M8 6.5C8.8 5.6 10.3 5 12 5c3.9 0 7 3.1 7 7c0 1.7-.6 3.2-1.5 4"></path><path d="M16 17.5c-.8.9-2.3 1.5-4 1.5c-3.9 0-7-3.1-7-7c0-1.7.6-3.2 1.5-4"></path></svg>
+                    </div>
+                    <h5 class="font-bold text-gray-800">Nivel Genético</h5>
+                    <p class="text-xs text-gray-600 mt-2">Variación de alelos dentro de cada especie.</p>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-sm p-6 text-center border-b-4 border-cloro">
+                    <div class="w-12 h-12 mx-auto bg-emerald-100 rounded-full flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-cloro" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="m8 2 1.88 1.88"/><path d="M14.12 3.88 16 2"/><path d="M9 7.13v-1a3.003 3.003 0 1 1 6 0v1"/><path d="M12 20c-3.3 0-6-2.7-6-6v-3a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v3c0 3.3-2.7 6-6 6"/><path d="M12 20v-9"/><path d="M6.53 9C4.6 8.8 3 7.1 3 5"/><path d="M17.47 9c1.93-.2 3.53-1.9 3.53-3.8"/><path d="M8 14H4"/><path d="M16 14h4"/><path d="M9.7 18 6 22"/><path d="M14.3 18 18 22"/></svg>
+                    </div>
+                    <h5 class="font-bold text-gray-800">Nivel Específico</h5>
+                    <p class="text-xs text-gray-600 mt-2">Variación en el número de especies (Mayr, 1942).</p>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-sm p-6 text-center border-b-4 border-tierra">
+                    <div class="w-12 h-12 mx-auto bg-stone-100 rounded-full flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-tierra" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="m8 3 4 8 5-5 5 15H2L8 3z"/></svg>
+                    </div>
+                    <h5 class="font-bold text-gray-800">Nivel Ecosistémico</h5>
+                    <p class="text-xs text-gray-600 mt-2">Variación en hábitats y complejos funcionales.</p>
+                </div>
+            </div>
+            
+            <p class="text-xs text-center text-gray-500 mt-4"><em>Nota: Los límites entre niveles no son precisos debido al flujo génico y extinciones.</em></p>
+        </div>
+    </section>
+
+    <!-- ZONA DE RETO (AUTOEVALUACIONES COMBINADAS) -->
+    <section class="bg-gray-900 text-white py-12">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h3 class="text-2xl font-serif font-bold text-emerald-400 mb-6">Ponte a prueba</h3>
+            <p class="text-sm text-gray-400 mb-8">Reflexiona sobre las siguientes preguntas clave de la Unidad 1:</p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-left">
+                <div class="bg-gray-800 p-5 rounded-xl">
+                    <span class="text-cloro font-bold block mb-2">1.1</span>
+                    <p class="text-xs text-gray-300">De acuerdo con la Society of Systematic Biologists, ¿cuál es el enfoque central de la sistemática y qué tipo de entidades biológicas estudia además de los organismos?</p>
+                </div>
+                <div class="bg-gray-800 p-5 rounded-xl">
+                    <span class="text-tierra font-bold block mb-2">1.2</span>
+                    <p class="text-xs text-gray-300">¿Cuál es la diferencia fundamental en los criterios de agrupación entre la Fenética y la Cladística?</p>
+                </div>
+                <div class="bg-gray-800 p-5 rounded-xl">
+                    <span class="text-azulprof font-bold block mb-2">1.3</span>
+                    <p class="text-xs text-gray-300">¿Por qué es limitado definir "especie" únicamente como un conjunto de organismos capaces de reproducirse entre sí?</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
