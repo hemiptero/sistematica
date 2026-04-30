@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        :root {
+            --unam-azul: #003D7E;
+            --unam-oro: #D59F0F;
+        }
+        .guia-container {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 900px;
+            margin: 20px auto;
+            color: #333;
+            line-height: 1.6;
+        }
+        .header-interactivo {
+            background-color: var(--unam-azul);
+            color: white;
+            padding: 30px;
+            text-align: center;
+            border-bottom: 8px solid var(--unam-oro);
+            border-radius: 8px 8px 0 0;
+        }
+        .seccion-teoria {
+            background: white;
+            padding: 20px;
+            border: 1px solid #ddd;
+            margin-bottom: 20px;
+        }
+        .concept-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+        .concept-card {
+            background: #f0f4f8;
+            padding: 15px;
+            border-left: 4px solid var(--unam-azul);
+            border-radius: 4px;
+            font-size: 0.9em;
+        }
+        .concept-card strong {
+            display: block;
+            color: var(--unam-azul);
+            margin-bottom: 5px;
+            font-size: 1.1em;
+        }
+        .pregunta-box {
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background: #fff;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        details summary {
+            padding: 15px;
+            background: #f8f9fa;
+            font-weight: bold;
+            color: var(--unam-azul);
+            cursor: pointer;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        details summary::-webkit-details-marker { display: none; }
+        details summary::after { content: '▼'; font-size: 0.8em; color: var(--unam-oro); }
+        details[open] summary::after { content: '▲'; }
+        
+        .opciones-container { padding: 15px; }
+        .btn-opcion {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0;
+            background: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            text-align: left;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .btn-opcion:hover { background: #eef2f7; }
+        .feedback {
+            margin-top: 15px;
+            padding: 15px;
+            border-radius: 5px;
+            display: none;
+            font-size: 0.95em;
+        }
+        .feedback.correcto { background: #d4edda; color: #155724; border-left: 5px solid #28a745; }
+        .feedback.incorrecto { background: #f8d7da; color: #721c24; border-left: 5px solid #dc3545; }
+    </style>
+</head>
+<body>
+
+<div class="guia-container">
+    <div class="header-interactivo">
+        <h1 style="margin:0; font-size: 2.2em;">GUÍA EXTENSA DE SISTEMÁTICA</h1>
+        <p style="margin:10px 0 0; opacity: 0.9;">FES Iztacala - UNAM | Domina los 14 Conceptos Fundamentales</p>
+    </div>
+
+    <div class="seccion-teoria">
+        <h2 style="color: var(--unam-azul); border-bottom: 2px solid var(--unam-oro); padding-bottom: 5px;">I. Compendio de Terminología y Métodos</h2>
+        <div class="concept-grid">
+            <div class="concept-card">
+                <strong>Homología</strong> Similitud por ancestría común; única evidencia de parentesco real.
+            </div>
+            <div class="concept-card">
+                <strong>Homoplasia</strong> Similitud no heredada por ancestría (Convergencia, Paralelismo o Reversión).
+            </div>
+            <div class="concept-card">
+                <strong>Convergencia</strong> Desarrollo independiente de rasgos similares ante presiones selectivas análogas.
+            </div>
+            <div class="concept-card">
+                <strong>Reversión</strong> Carácter derivado que regresa a su estado ancestral (pérdida secundaria).
+            </div>
+            <div class="concept-card">
+                <strong>Apomorfía</strong> Estado de carácter derivado o novedad evolutiva.
+            </div>
+            <div class="concept-card">
+                <strong>Plesiomorfía</strong> Estado de carácter ancestral o primitivo. No agrupa en cladística.
+            </div>
+            <div class="concept-card">
+                <strong>Sinapomorfía</strong> Apomorfía compartida por dos o más grupos; define clados monofiléticos.
+            </div>
+            <div class="concept-card">
+                <strong>Sistemática Fenética</strong> Clasifica por similitud global (overall similarity) usando fenogramas.
+            </div>
+            <div class="concept-card">
+                <strong>Sist. Filogenética (Cladística)</strong> Clasifica por sinapomorfías; busca reflejar la historia genealógica.
+            </div>
+            <div class="concept-card">
+                <strong>Máxima Parsimonia</strong> Elige el árbol con menor número de cambios (Navaja de Occam).
+            </div>
+            <div class="concept-card">
+                <strong>Sistemática Molecular</strong> Uso de ADN/Proteínas como caracteres. Cada nucleótido es una posición.
+            </div>
+            <div class="concept-card">
+                <strong>DNA Barcoding</strong> Identificación rápida con genes estandarizados (ej. COI en animales).
+            </div>
+            <div class="concept-card">
+                <strong>Máxima Verosimilitud (ML)</strong> Busca el árbol que maximiza la probabilidad de los datos según un modelo.
+            </div>
+            <div class="concept-card">
+                <strong>Inferencia Bayesiana</strong> Calcula la probabilidad del árbol dados los datos (Probabilidad Posterior).
+            </div>
+        </div>
+    </div>
+
+    <h2 style="color: var(--unam-azul); margin: 30px 0 15px;">II. Autoevaluación Integral</h2>
+
+    <div id="quiz-root">
+        <!-- Pregunta 1 -->
+        <div class="pregunta-box">
+            <details>
+                <summary>Pregunta 1: Evidencia Filogenética</summary>
+                <div class="opciones-container">
+                    <p>¿Qué término describe un estado derivado compartido que permite establecer clados?</p>
+                    <button class="btn-opcion" onclick="evaluar(1, 0, this)">a) Plesiomorfía</button>
+                    <button class="btn-opcion" onclick="evaluar(1, 1, this)">b) Sinapomorfía</button>
+                    <button class="btn-opcion" onclick="evaluar(1, 2, this)">c) Homoplasia</button>
+                    <div id="feed-1" class="feedback"></div>
+                </div>
+            </details>
+        </div>
+
+        <!-- Pregunta 2 -->
+        <div class="pregunta-box">
+            <details>
+                <summary>Pregunta 2: Ruido en la Inferencia</summary>
+                <div class="opciones-container">
+                    <p>Si una característica similar aparece en dos grupos sin ancestría común cercana, estamos ante una:</p>
+                    <button class="btn-opcion" onclick="evaluar(2, 0, this)">a) Homología</button>
+                    <button class="btn-opcion" onclick="evaluar(2, 1, this)">b) Reversión</button>
+                    <button class="btn-opcion" onclick="evaluar(2, 2, this)">c) Homoplasia (Convergencia)</button>
+                    <div id="feed-2" class="feedback"></div>
+                </div>
+            </details>
+        </div>
+
+        <!-- Pregunta 3 -->
+        <div class="pregunta-box">
+            <details>
+                <summary>Pregunta 3: Escuelas Taxonómicas</summary>
+                <div class="opciones-container">
+                    <p>¿Cuál es la diferencia crítica de la Fenética frente a la Cladística?</p>
+                    <button class="btn-opcion" onclick="evaluar(3, 0, this)">a) Usa similitud global sin distinguir homología de homoplasia.</button>
+                    <button class="btn-opcion" onclick="evaluar(3, 1, this)">b) Solo utiliza caracteres moleculares.</button>
+                    <button class="btn-opcion" onclick="evaluar(3, 2, this)">c) Busca grupos estrictamente monofiléticos.</button>
+                    <div id="feed-3" class="feedback"></div>
+                </div>
+            </details>
+        </div>
+
+        <!-- Pregunta 4 -->
+        <div class="pregunta-box">
+            <details>
+                <summary>Pregunta 4: Simplicidad Evolutiva</summary>
+                <div class="opciones-container">
+                    <p>La Máxima Parsimonia prefiere el árbol que:</p>
+                    <button class="btn-opcion" onclick="evaluar(4, 0, this)">a) Tiene la mayor Probabilidad Posterior.</button>
+                    <button class="btn-opcion" onclick="evaluar(4, 1, this)">b) Minimiza el número total de pasos evolutivos.</button>
+                    <button class="btn-opcion" onclick="evaluar(4, 2, this)">c) Utiliza la mayor cantidad de homoplasias.</button>
+                    <div id="feed-4" class="feedback"></div>
+                </div>
+            </details>
+        </div>
+
+        <!-- Pregunta 5 -->
+        <div class="pregunta-box">
+            <details>
+                <summary>Pregunta 5: Inferencia Probabilística</summary>
+                <div class="opciones-container">
+                    <p>¿Qué método se basa en el Teorema de Bayes para hallar la probabilidad del árbol dado el alineamiento?</p>
+                    <button class="btn-opcion" onclick="evaluar(5, 0, this)">a) Máxima Verosimilitud</button>
+                    <button class="btn-opcion" onclick="evaluar(5, 1, this)">b) Inferencia Bayesiana</button>
+                    <button class="btn-opcion" onclick="evaluar(5, 2, this)">c) Sistemática Fenética</button>
+                    <div id="feed-5" class="feedback"></div>
+                </div>
+            </details>
+        </div>
+
+        <!-- Pregunta 6 -->
+        <div class="pregunta-box">
+            <details>
+                <summary>Pregunta 6: Identificación Molecular</summary>
+                <div class="opciones-container">
+                    <p>El DNA Barcoding permite la identificación taxonómica rápida mediante:</p>
+                    <button class="btn-opcion" onclick="evaluar(6, 0, this)">a) El análisis de fenogramas de similitud total.</button>
+                    <button class="btn-opcion" onclick="evaluar(6, 1, this)">b) Genes estándar estandarizados como COI.</button>
+                    <button class="btn-opcion" onclick="evaluar(6, 2, this)">c) La búsqueda de plesiomorfías en el genoma nuclear.</button>
+                    <div id="feed-6" class="feedback"></div>
+                </div>
+            </details>
+        </div>
+
+        <!-- Pregunta 7 -->
+        <div class="pregunta-box">
+            <details>
+                <summary>Pregunta 7: Evolución de Caracteres</summary>
+                <div class="opciones-container">
+                    <p>Si una ballena pierde sus extremidades y "regresa" a un estado hidrodinámico similar al ancestral, se denomina:</p>
+                    <button class="btn-opcion" onclick="evaluar(7, 0, this)">a) Reversión</button>
+                    <button class="btn-opcion" onclick="evaluar(7, 1, this)">b) Autapomorfía</button>
+                    <button class="btn-opcion" onclick="evaluar(7, 2, this)">c) Sinapomorfía</button>
+                    <div id="feed-7" class="feedback"></div>
+                </div>
+            </details>
+        </div>
+
+        <!-- Pregunta 8 -->
+        <div class="pregunta-box">
+            <details>
+                <summary>Pregunta 8: Verosimilitud</summary>
+                <div class="opciones-container">
+                    <p>A diferencia de la Parsimonia, la Máxima Verosimilitud:</p>
+                    <button class="btn-opcion" onclick="evaluar(8, 0, this)">a) Ignora los modelos de sustitución genética.</button>
+                    <button class="btn-opcion" onclick="evaluar(8, 1, this)">b) Maximiza P(Datos | Árbol) usando modelos evolutivos.</button>
+                    <button class="btn-opcion" onclick="evaluar(8, 2, this)">c) Solo es aplicable a datos morfológicos.</button>
+                    <div id="feed-8" class="feedback"></div>
+                </div>
+            </details>
+        </div>
+    </div>
+
+    <footer style="text-align: center; margin-top: 40px; color: #888; font-size: 0.85em; border-top: 1px solid #ddd; padding-top: 10px;">
+        "Por mi raza hablará el espíritu" - Facultad de Estudios Superiores Iztacala.
+    </footer>
+</div>
+
+<script>
+    const quizData = [
+        {}, // dummy
+        { correct: 1, text: "Correcto. La sinapomorfía es la base de la cladística para definir clados monofiléticos." },
+        { correct: 2, text: "Correcto. La convergencia es una homoplasia donde linajes distintos desarrollan rasgos similares." },
+        { correct: 0, text: "Correcto. La fenética agrupa por similitud total (SMC, Jaccard), ignorando el origen evolutivo." },
+        { correct: 1, text: "Correcto. La parsimonia busca la explicación más económica (menor longitud de pasos)." },
+        { correct: 1, text: "Correcto. El enfoque Bayesiano busca P(H|D), la probabilidad posterior de la hipótesis." },
+        { correct: 1, text: "Correcto. El Barcoding usa marcadores universales cortos para identificación taxonómica." },
+        { correct: 0, text: "Correcto. La reversión es el retorno de un estado derivado al estado ancestral o similar a él." },
+        { correct: 1, text: "Correcto. ML busca el árbol que mejor explica los datos observados bajo un modelo." }
+    ];
+
+    function evaluar(qId, selectedIdx, btn) {
+        const feed = document.getElementById('feed-' + qId);
+        const qData = quizData[qId];
+        
+        // Deshabilitar botones de esta pregunta
+        const parent = btn.parentElement;
+        const btns = parent.querySelectorAll('.btn-opcion');
+        btns.forEach(b => b.style.pointerEvents = 'none');
+
+        feed.style.display = 'block';
+        if (selectedIdx === qData.correct) {
+            feed.className = "feedback correcto";
+            feed.innerHTML = "✅ " + qData.text;
+            btn.style.background = "#d4edda";
+            btn.style.borderColor = "#28a745";
+        } else {
+            feed.className = "feedback incorrecto";
+            feed.innerHTML = "❌ Incorrecto. Revisa el glosario para aclarar la distinción entre estados y procesos.";
+            btn.style.background = "#f8d7da";
+            btn.style.borderColor = "#dc3545";
+        }
+    }
+</script>
+
+</body>
+</html>
